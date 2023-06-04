@@ -11,13 +11,11 @@ import numpy as np
 import pickle
 import gdown
 import streamlit.components.v1 as components
-import os
+
 from nbconvert import HTMLExporter
 import nbformat
 
 
-print("Current working directory:", os.getcwd())
-print("Files in working directory:", os.listdir())
 
 # Load the model
 loaded_model = pickle.load(open('final_model.sav', 'rb'))
@@ -160,12 +158,10 @@ def main():
     # Display the HTML in Streamlit
         components.html(body,width=1000, height=1000, scrolling=True)
     elif choice == "Ydata_Overview":
-        url = 'https://drive.google.com/uc?id=1TTjeEu5DQ3S38E6-Zoqn3AIBsoxOTQ5R'
-        output = 'Profile_report.html'
-        gdown.download(url, output, quiet=False)
-
-        with open('Profile_report.html', 'r') as f:
+        with open('Profile_report.html', r) as f:
             html_string = f.read()
+        
+            
         components.html(html_string, height = 800, scrolling=True)
 
 if __name__ == "__main__":
