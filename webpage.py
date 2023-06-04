@@ -20,10 +20,10 @@ print("Current working directory:", os.getcwd())
 print("Files in working directory:", os.listdir())
 
 # Load the model
-loaded_model = pickle.load(open(r'C:\Users\navee\Green_Concrete_Strength_predication_model\final_model.sav', 'rb'))
+loaded_model = pickle.load(open('final_model.sav', 'rb'))
 # Load the hybrid model components
-xgb_model2 = pickle.load(open(r'C:\Users\navee\Green_Concrete_Strength_predication_model\xgb_model2.sav', 'rb'))
-lgb_model2 = pickle.load(open(r'C:\Users\navee\Green_Concrete_Strength_predication_model\lgb_model2.sav', 'rb'))
+xgb_model2 = pickle.load(open('xgb_model2.sav', 'rb'))
+lgb_model2 = pickle.load(open('lgb_model2.sav', 'rb'))
 # Create a function to make predictions
 def make_prediction(cement, age, blast_furnace_slag, coarse_aggregate, fine_aggregate, fly_ash, superplasticizer, water):
     new_data = pd.DataFrame([
@@ -148,7 +148,7 @@ def main():
         st.markdown("<h2 style='text-align: left; color: black;'> Step-by-Step: Building and Optimizing Regression Models Filling the Gaps</h4>", unsafe_allow_html=True)
         
         # Read the Jupyter notebook file
-        with open(r'C:\Users\navee\Green_Concrete_Strength_predication_model\model_development.ipynb', 'r') as f:
+        with open('model_development.ipynb', 'r') as f:
             notebook = nbformat.read(f, as_version=4)
 
     # Convert the Jupyter notebook to HTML
