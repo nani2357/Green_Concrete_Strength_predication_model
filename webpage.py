@@ -158,10 +158,8 @@ def main():
     # Display the HTML in Streamlit
         components.html(body,width=1000, height=1000, scrolling=True)
     elif choice == "Ydata_Overview":
-        with open('Profile_report.html', r) as f:
+        with open('Profile_report.html', 'r') as f:
             html_string = f.read()
-        
-            
         components.html(html_string, height = 800, scrolling=True)
 
 if __name__ == "__main__":
