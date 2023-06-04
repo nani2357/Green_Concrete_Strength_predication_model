@@ -4,3 +4,6 @@ numpy
 pickle5
 nbconvert
 nbformat
+lightgbm
+xgboost
+scikit-learn
