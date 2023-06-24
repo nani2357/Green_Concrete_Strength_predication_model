@@ -7,3 +7,4 @@ nbformat
 lightgbm
 xgboost
 scikit-learn
+pillow
