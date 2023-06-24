@@ -47,7 +47,7 @@ def show_html_file(file_name):
 def main():
     st.title("Predictive Modeling for Concrete Strength Using Recycled and Traditional Materials")
 
-    menu = ["Home", "Predict", "Model Development", "Ydata_Overview"]
+    menu = ["Home", "Predict", "Model Development", "Ydata_Overview","About Me"]
     choice = st.sidebar.radio("Menu", menu)
 
     if choice == "Home":
@@ -161,6 +161,100 @@ def main():
         with open('profile_report.html', 'r') as f:
             html_string = f.read()
         components.html(html_string, height = 800, scrolling=True)
+
+
+    elif choice == "About Me":
+        st.title('About Me')
+
+        col1, col2 = st.columns(2)
+
+        with col1:
+            st.write("""
+            ## Naveen Kumar Kadampally
+         
+            ## Professional Background
+
+           My career journey started as a **Civil Engineer** at RG Constructions where I honed my skills in construction management, contract management, and AutoCAD. My role here was multidimensional, and I was responsible for everything from supervising construction workers, ensuring site safety, to material quantity management. My stint at RG Constructions provided me with a strong foundation and a broad perspective of problem-solving, which was the cornerstone for my subsequent career transitions.
+
+           
+        """)
+
+        with col2:
+            image = Image.open("img.jpg")
+            st.image(image, use_column_width=True)
+
+        
+        st.write("""
+         I then made a bold career switch into the technology domain as a **Software Test Analyst** at Unified Softech. Intrigued by the role of data in decision-making and the potential it had to revolutionize industries, I navigated my way into data analysis and data science.
+
+        My transformation into a **Data Analyst** was an exciting journey. After acquiring the IBM Data Science Professional Certification, I began leveraging my knowledge in various data analysis tools and Python libraries to derive valuable insights from complex datasets. I played a pivotal role in developing targeted marketing strategies and enhancing customer experience by managing customer complaints more efficiently.
+
+        Building on my data analysis experience, I am currently diving deeper into the realm of **Artificial Intelligence (AI) and Machine Learning**. I am exploring these technologies to build advanced models that can further streamline decision-making and efficiency in businesses.
+
+        ## Skills
+
+        My technical skills range from **AutoCAD** and **Revit** in the field of Civil Engineering to **Python**, **SQL**, **Tableau**, and **PowerBI** in Data Analysis. My knowledge of **Machine Learning algorithms** and **Data Visualization tools** has allowed me to create intuitive dashboards and powerful predictive models.
+
+        On the soft skills front, I pride myself on my strong **communication skills** and **project management** abilities. These skills have been instrumental in leading teams, managing projects, and effectively coordinating with stakeholders.
+
+        ## Projects
+
+        I have been involved in several exciting projects throughout my career journey. My key projects include a **Customer Segmentation Project** at Unified Softech where I used Machine Learning to segment customers based on their purchasing history. The outcome was a more personalized customer experience and improved customer retention rates.
+
+        I also embarked on a project focused on **Predictive Analysis of Sales Data**. This project involved creating a model that could accurately predict future sales based on historical data, helping the company to strategically plan their production and inventory management.
+
+        In a freelance capacity, I worked with a construction company to develop a **Machine Learning model for Green Concrete Strength Prediction**. The model made accurate predictions about the strength of the green concrete based on the composition of recycled materials. This innovative approach promoted sustainability in the construction industry.
+
+        Now, as I venture into AI and Deep Learning, I'm excited to work on more advanced projects that integrate these technologies. My current projects are aimed at exploring new frontiers in AI and I am thrilled about the potential outcomes.
+        """)
+                 
+                 
+    
+        st.write("""
+        ## Certifications
+
+        I have pursued several certifications to expand my knowledge base and validate my skills, including:
+
+        - **IBM Data Science Professional Certification**: This certification provided a solid grounding in data science methodologies, and tools including Python, SQL, and data visualization.
+
+        - **ISTQB Certified Tester**: This internationally recognized certification has honed my understanding of software testing techniques and principles. It played a pivotal role during my tenure as a Software Test Analyst at Unified Softech.
+
+        - **Microsoft Power BI Certification**: This certification confirmed my expertise in using PowerBI for data analysis and visualization, enabling me to create effective and insightful dashboards.
+
+        - **AutoCAD Certified User**: This certification validated my proficiency in AutoCAD software, which I utilized extensively during my tenure as a Civil Engineer.
+
+        ## Learning Journey and Future Goals
+
+        Transitioning from Civil Engineering to Software Testing, and then Data Science has been an incredible journey of learning and growth. This journey has taught me that technology's potential is boundless, and the more we learn, the more we can harness its power.
+
+        As I venture further into the world of AI and Machine Learning, I aim to create more sophisticated models and solutions that can enhance decision-making and efficiency in businesses.
+
+        I am also eager to contribute to the growing field of AI ethics, as I believe that responsible AI usage is crucial for future technological advancements. In line with this, I am working towards obtaining a certification in AI Ethics in the coming year.
+
+        ## Personal Interests
+
+        I have a profound affinity for the outdoors. I am captivated by nature and relish every opportunity to be outside, whether that's on sun-drenched beaches or in the verdant expanses of a forest. I find these moments to be incredibly refreshing and grounding, a perfect respite from the hustle and bustle of the tech world. 
+
+        Mountains, in particular, hold a special allure for me. I love trekking through mountainous terrains and setting up camp under the stars. There's something incredibly serene about the stillness of the night, punctuated only by the gentle crackle of a campfire and the laughter and stories shared around it. 
+    
+        Lakes are another favorite escape of mine, especially those nestled in the heart of mountains. I enjoy boating and fishing, finding these activities to be both exciting and soothing. There's a unique sense of contentment I experience when I am casting a line out into the tranquil water, surrounded by the majesty of mountain peaks.
+    
+        Beyond my love for outdoor activities, I am an internet enthusiast. I spend a considerable amount of time surfing the web, staying updated on emerging trends and technologies. This curiosity extends to my professional life, as it helps me keep a pulse on the rapidly evolving tech landscape.
+    
+        My family plays a pivotal role in my life. I treasure the time spent watching movies with my children and exploring the outdoors with them. I believe these experiences foster their curiosity, teach them resilience, and create priceless memories.
+    
+        My interests, whether it's my love for nature or technology, or my devotion to family, shape who I am. They provide me with relaxation, continual learning, and cherished experiences – elements that I consider vital in life.
+
+        ## Contact Information
+
+        I'm always open to discussing data science, technology, and potential collaborations. You can reach me via email at [naveenkadampally@outlook.com](mailto:naveenkadampally@outlook.com).
+
+        ### Social Media Profiles
+        [![Instagram](https://img.shields.io/badge/-Instagram-black?style=flat-square&logo=instagram)](https://www.instagram.com/naveen.ka202/)
+        [![LinkedIn](https://img.shields.io/badge/-LinkedIn-black?style=flat-square&logo=linkedin)](https://www.linkedin.com/in/naveen-kumar-kadampally/)
+        [![GitHub](https://img.shields.io/badge/-GitHub-black?style=flat-square&logo=github)](https://github.com/nani2357)
+    """)
+    
 
 if __name__ == "__main__":
     main()
