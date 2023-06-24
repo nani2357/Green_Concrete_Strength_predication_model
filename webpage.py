@@ -14,6 +14,8 @@ import streamlit.components.v1 as components
 
 from nbconvert import HTMLExporter
 import nbformat
+from PIL import Image
+
 
 
 
